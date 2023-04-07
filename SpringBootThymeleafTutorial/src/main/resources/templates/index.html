@@ -2,10 +2,24 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title th:text="${pageTitle}">Template title</title>
 </head>
 <body>
 <h1>Spring Boot Tutorial</h1>
 <h2>Spring Boot Thymeleaf Tutorial.</h2>
+<br/><br/>
+<p th:text="'Part 01: ' + ${text}"></p>
+<br/><br/>
+<div th:each="book: ${books}">
+	<p th:text="${book}"></p>
+</div>
+<br/><br/>
+<div th:object="${tutorial}">
+	<p><span th:text="*{id}"></span> - <span th:text="*{title}"></span> - <span th:text="*{author}"></span></p>
+</div>
+<br/><br/>
+<div th:each="tutorial: ${tutorials}">
+	<p><span th:text="${tutorial.id}"></span> - <span th:text="${tutorial.title}"></span> - <span th:text="${tutorial.author}"></span></p>
+</div>
 </body>
 </html>
