@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${pageTitle}">Template title</title>
+
+</head>
+<body>
+
+<h1>Spring Boot Tutorial</h1>
+<h2>Spring Boot Thymeleaf Tutorial.</h2>
+<br/><br/>
+<button type="button" th:onclick="showAlert()">Show Alert</button>
+<br/><br/>
+<a th:href="@{/}">Home</a>
+<br/><br/>
+<a th:href="@{${link}}" th:text="${linktext}">Link</a>
+<script th:inline="javascript">
+
+	function showAlert() {
+	    alert(/*[[${text}]]*/);
+	}
+
+</script>
+</body>
+</html>
