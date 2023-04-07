@@ -10,6 +10,8 @@
 <br/><br/>
 <p th:text="'Part 01: ' + ${text}"></p>
 <br/><br/>
+<p th:text="|Part 01: ${text}|"></p>
+<br/><br/>
 <div th:each="book: ${books}">
 	<p th:text="${book}"></p>
 </div>
@@ -21,5 +23,7 @@
 <div th:each="tutorial: ${tutorials}">
 	<p><span th:text="${tutorial.id}"></span> - <span th:text="${tutorial.title}"></span> - <span th:text="${tutorial.author}"></span></p>
 </div>
+<br/><br/>
+<a th:href="@{/link}">Link</a>
 </body>
 </html>

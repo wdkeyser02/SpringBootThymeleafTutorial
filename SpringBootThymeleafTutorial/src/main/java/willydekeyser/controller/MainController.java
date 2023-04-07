@@ -24,4 +24,11 @@ public class MainController {
 		
 		return "index";
 	}
+	
+	@GetMapping("/link")
+	public String link(Model model) {
+				
+		model.addAttribute("pageTitle", "Spring Boot Tutorial.");
+		return "link";
+	}
 }
