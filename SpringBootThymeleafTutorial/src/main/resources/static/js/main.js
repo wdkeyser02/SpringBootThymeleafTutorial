@@ -1,6 +1,6 @@
 
 
 function showAlert() {
-    alert(/*[[${text}]]*/);
+    alert("The button was clicked!");
 }
 
