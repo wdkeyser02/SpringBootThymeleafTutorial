@@ -14,6 +14,8 @@
 <br/><br/>
 <p th:utext="#{welcome.text} + ' and ' + ${text}">Hello!</p>
 <br/><br/>
+<p th:utext="#{welcome.text.variable(${pageTitle}, ${text})}">Hello!</p>
+<br/><br/>
 <div th:each="book: ${books}">
 	<p th:text="${book}"></p>
 </div>
