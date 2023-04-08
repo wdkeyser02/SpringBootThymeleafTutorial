@@ -24,7 +24,7 @@ public class ScriptCssController {
 	@GetMapping("/script")
 	public String script(Model model) {
 		model.addAttribute("pageTitle", "Spring Boot Tutorial.");
-		model.addAttribute("text", "The button was clicked!");
+		model.addAttribute("text", "The button was clicked!............");
 		model.addAttribute("link", "/");
 		model.addAttribute("linktext", "Home");
 		return "script";
