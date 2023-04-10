@@ -21,11 +21,14 @@
 </div>
 <br/><br/>
 <div th:object="${tutorial}">
-	<p><span th:text="*{id}"></span> - <span th:text="*{title}"></span> - <span th:text="*{author}"></span></p>
+	<p><span th:text="*{id}"></span> - <span 
+	th:text="*{title}"></span> - <span th:text="*{author}"></span></p>
 </div>
 <br/><br/>
 <div th:each="tutorial: ${tutorials}">
-	<p><span th:text="${tutorial.id}"></span> - <span th:text="${tutorial.title}"></span> - <span th:text="${tutorial.author}"></span></p>
+	<p><span th:text="${tutorial.id}"></span> - 
+	<span th:text="${tutorial.title}"></span> - 
+	<span th:text="${tutorial.author}"></span></p>
 </div>
 <br/><br/>
 <a th:href="@{/link}">Link</a>
